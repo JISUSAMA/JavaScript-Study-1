@@ -1,0 +1,24 @@
+body {
+  margin: 10;
+  background-color: black;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.alert-div {
+  display: block;
+}
+
+.alert-box-bg {
+  background-color: tan;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  display: none;
+}
+
+.alert-box {
+  padding-right: 10px;
+}/*# sourceMappingURL=css.css.map */
