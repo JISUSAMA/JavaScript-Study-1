@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <!-- 부트스트랩 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <link href="css.css" rel="stylesheet" />
+    <script src="js.js"></script>
+  </head>
+  <body>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="black-bg">
+      <div class="white-bg">
+        <!-- 폼 전송시 이동할 페이지 기입란 -->
+        <form action="clear.html">
+          <fieldset>
+            사용자 정보 입력
+            <legend>
+              <div class="my-3" id="id">
+                <input type="text" class="form-control" />
+              </div>
+            </legend>
+            <legend>
+              <div class="my-3" id="password">
+                <input type="password" class="form-control" />
+              </div>
+            </legend>
+          </fieldset>
+          <button type="submit" class="btn btn-primary" id="send">전송</button>
+          <button type="button" class="btn btn-danger" id="close">닫기</button>
+        </form>
+      </div>
+    </div>
+    <button class="open-button">OPEN</button>
+
+    <!-- <p></p>
+    <form action="#" accept-charset="utf-8" name="person_info" method="get">
+      <fieldset style="width: 150">
+        <legend>개인 정보 입력</legend>
+        이름 :
+        <input type="text" name="name" required />
+        <br /><br />
+        주민번호 :
+        <input
+          type="text"
+          name="security_number"
+          pattern="\d{6}\-\d{7}"
+          title="123456-1234567 형식으로 입력해주세요"
+        /><br /><br />
+        아이디 : <input type="text" name="id" /> <br /><br />
+        패스워드 : <input type="password" name="password" /> <br /><br />
+        성별 : 남<input type="radio" name="gender" /> 여<input
+          type="radio"
+          name="gender"
+        />
+        <br /><br />
+        관심사 : 연예
+        <input type="checkbox" name="checkbox1" /> 스포츠<input
+          type="checkbox"
+          name="checkbox2"
+        />
+        IT<input type="checkbox" name="checkbox3" /><br /><br />
+        <input type="submit" value="submit" />
+        <input type="reset" value="reset" /><br /><br />
+      </fieldset>
+    </form> -->
+
+    <script>
+      $(".open-button").on("click", function () {
+        $(".black-bg").toggleClass("show");
+      });
+      $(".btn").on("click", function () {
+        $(".black-bg").toggleClass("show");
+      });
+    </script>
+    <!-- 전송시, 오류 검사 -->
+    <script>
+      var ID = document.getElementById("id").value;
+      var PW = document.getElementById("password").value;
+      $("form").on("submit", function (e) {
+        // if (ID == "") {
+        //   e.preventDefault();
+        //   alert("아이디 없음!");
+        // } else if (PW == "") {
+        //   e.preventDefault();
+        //   alert("비번 없음!");
+        // }
+
+        if (document.getElementById("id").value == "") {
+          e.preventDefault();
+          alert("아이디 없음!");
+        } else if (document.getElementById("password").value == "") {
+          e.preventDefault();
+          alert("비번 없음!");
+        }
+      });
+
+      // alert("오류!");
+    </script>
+  </body>
+</html>
