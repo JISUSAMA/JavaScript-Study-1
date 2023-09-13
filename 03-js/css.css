@@ -1,0 +1,19 @@
+body {
+  margin: 10;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.alert-box-bg {
+  background-color: tan;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  display: none;
+}
+
+.alert-box {
+  padding-right: 10px;
+}/*# sourceMappingURL=css.css.map */

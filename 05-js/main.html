@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <!-- 부트스트랩 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <link href="css.css" rel="stylesheet" />
+    <script src="js.js"></script>
+  </head>
+  <body>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand">Navbar</span>
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <ul class="list-group" id="test1">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+      </ul>
+    </nav>
+
+    <!-- <script>
+        
+      querySelector를 사용하면 편리하긴 하지만
+      맨위의 요소 하나만 찾아준다.
+      #은 id / .은 클래스를 의미한다
+      document.querySelectorAll[몇번째 요소를 사용할 것인지(0~)] 해당하는 모든 요소를 다찾아준다.
+
+      document.querySelector(".navbar-toggler").addEventListener('click',function(){
+        document.querySelector('.list-group').classList.toggle('show');
+      })
+    </script> -->
+    <p class="jq">안녕하세요!</p>
+    <p class="color-jq">색상 변경, 안녕하세요!</p>
+    <p class="size-jq">크기 변경, 안녕하세요!</p>
+    <p class="padding-jq">padding 변경!</p>
+
+    <p class="class-jq">같은 class1 변경!</p>
+    <p class="class-jq">같은 class2 변경!</p>
+    <p class="class-jq">같은 class3 변경!</p>
+
+    <script>
+      // document.querySelector(".jq").innerHTML = "안녕!";
+      $(".jq").html("안녕!jq");
+
+      // document.querySelector(".color-jq").style.color = "red";
+      $(".color-jq").css("color", "red");
+
+      document.querySelector(".size-jq").style.fontSize = "20px";
+      // $(".size-jq").css("font-size", "20px");
+
+      // document.querySelector(".padding-jq").style.padding = "10px";
+      $(".padding-jq").css("padding", "10px");
+
+      document.querySelectorAll(".class-jq")[0].innerHTML = "class 변경 됨!";
+      document.querySelectorAll(".class-jq")[1].innerHTML = "class 변경 됨!";
+      document.querySelectorAll(".class-jq")[2].innerHTML = "class 변경 됨!";
+
+      $(".class-jq").html("class 변경 됨!");
+
+      document.getElementsByClassName("list-group")[0].classList.toggle("show");
+      document.getElementsByClassName("list-group")[0].classList.add("show");
+      document.getElementsByClassName("list-group")[0].classList.remove("show");
+      $(".list-group").addClass("show");
+      $(".list-group").toggleClass("show");
+      $(".list-group").removeClass("show");
+
+      document.querySelector("#test-btn").addEventListener();
+      $("#test-btn").on("click", function () {
+        $(".list-group").css("display", "none");
+      });
+    </script>
+  </body>
+</html>
