@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <!-- 부트스트랩 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <link href="css.css" rel="stylesheet" />
+    <script src="js.js"></script>
+  </head>
+  <body>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <button class="open-button">OPEN</button>
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4>HELLO, javascript</h4>
+        <button class="btn btn-dark" id="close">CLOSE</button>
+      </div>
+    </div>
+
+    <script>
+      $(".open-button").on("click", function () {
+        $(".black-bg").addClass("show");
+        $(".black-bg").removeClass("hide");
+      });
+      $(".btn").on("click", function () {
+        $(".black-bg").removeClass("show");
+        $(".black-bg").addClass("hide");
+      });
+    </script>
+  </body>
+</html>

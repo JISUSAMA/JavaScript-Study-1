@@ -1,0 +1,54 @@
+body {
+  margin: 10px;
+}
+div {
+  box-sizing: border-box;
+}
+
+@keyframes open-animation {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 400px;
+  }
+}
+@keyframes hide-animation {
+  0% {
+    height: 400px;
+  }
+  100% {
+    height: 0px;
+  }
+}
+.black-bg {
+  width: 100%;
+  height: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.white-bg {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.show {
+  animation-name: open-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  visibility: visible;
+  opacity: 1;
+}
+.hide {
+  animation-name: hide-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  visibility: visible;
+  opacity: 0;
+}
