@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript Study</title>
+  </head>
+  <body>
+    <p>태조 이성계가 태어난 년도는?</p>
+    <input type="text" id="answer" />
+    <button id="send-answer">제출</button>
+
+    <script>
+      let count = 0;
+      document
+        .querySelector("#send-answer")
+        .addEventListener("click", function () {
+          let answer = document.querySelector("#answer").value;
+          if (answer == "1335") {
+            alert("성공!");
+          } else {
+            if (count < 3) {
+              alert("실패!");
+              count += 1;
+            } else {
+              alert("멍청이!!");
+            }
+          }
+          console.log("count" + count);
+        });
+    </script>
+  </body>
+</html>
