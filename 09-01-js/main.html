@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>javascript</title>
+    <!-- 부트스트랩 -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    /> -->
+
+    <link href="css.css" rel="stylesheet" />
+    <script src="js.js"></script>
+  </head>
+  <body class="light">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand">JSShop</span>
+        <span class="badge bg-dark" type="button">다크 MODE</span>
+      </div>
+    </nav>
+    <div class="text-box-bg">
+      <p>Dark Mode Start!</p>
+      <button type="button">시작하기!</button>
+    </div>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var count = 0;
+      $(".badge").on("click", function () {
+        count += 1;
+        if (count % 2 == 1) {
+          $(".badge").html("라이트 MODE");
+          $(".light").addClass("dark");
+        } else {
+          $(".badge").html("다크 MODE");
+          $(".light").removeClass("dark");
+        }
+      });
+    </script>
+  </body>
+</html>
