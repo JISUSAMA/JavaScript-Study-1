@@ -3,18 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <title>Javascript Study</title>
+<<<<<<< HEAD
+=======
+    <link href="css.css" rel="stylesheet">
+>>>>>>> 7c099ff4ce559b8eac7da883011d31afd9ae37eb
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7c099ff4ce559b8eac7da883011d31afd9ae37eb
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+<<<<<<< HEAD
   </head>
   <body>
     <form>
@@ -70,6 +78,34 @@
       //     alert("대문자없는데요");
       //   }
       // });
+=======
+
+  </head>
+  <body>
+    <div style="ovwerflow-hidden">
+      <div class="slide-container">
+        <div class='slide-card-bg'><img src="IMG/car1.png"></div>
+        <div class='slide-card-bg'><img src="IMG/car2.png"></div>
+        <div class='slide-card-bg'><img src="IMG/car3.png"></div>
+      </div>
+    </div>
+    <div class="btn-container">
+      <button class="1-button">1</button>
+      <button class="2-button">2</button>
+      <button class='3-button'>3</button>
+    </div>
+    
+    <script>
+      $('.1-button').on('click',function(){
+        $('.slide-container').css('transform','translateX(0vw)');
+      });
+      $('.2-button').on('click',function(){
+        $('.slide-container').css('transform','translateX(-100vw)');
+      });
+      $('.3-button').on('click',function(){
+        $('.slide-container').css('transform','translateX(-200vw)');
+      });
+>>>>>>> 7c099ff4ce559b8eac7da883011d31afd9ae37eb
     </script>
   </body>
 </html>
