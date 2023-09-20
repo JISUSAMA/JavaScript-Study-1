@@ -35,6 +35,12 @@ ul.list::after {
   display: none;
   padding: 10px;
 }
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
 .black-bg {
   width: 100%;
   height: 100%;
@@ -57,4 +63,4 @@ ul.list::after {
   display: block;
   visibility: visible;
   opacity: 1;
-} /*# sourceMappingURL=css.css.map */
+}/*# sourceMappingURL=css.css.map */

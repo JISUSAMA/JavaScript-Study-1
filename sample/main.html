@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript Study</title>
+    <link href="css.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div style="ovwerflow-hidden">
+      <div class="slide-container">
+        <div class="slide-card-bg"><img src="IMG/img1.jpg" /></div>
+        <div class="slide-card-bg"><img src="IMG/img2.webp" /></div>
+        <div class="slide-card-bg"><img src="IMG/img3.jpg" /></div>
+      </div>
+    </div>
+    <!-- <div class="btn-container">
+      <button class="1-button">1</button>
+      <button class="2-button">2</button>
+      <button class="3-button">3</button>
+    </div> -->
+
+    <script>
+      $(".1-button").on("click", function () {
+        $(".slide-container").css("transform", "translateX(0vw)");
+      });
+      $(".2-button").on("click", function () {
+        $(".slide-container").css("transform", "translateX(-100vw)");
+      });
+      $(".3-button").on("click", function () {
+        $(".slide-container").css("transform", "translateX(-200vw)");
+      });
+    </script>
+  </body>
+</html>
