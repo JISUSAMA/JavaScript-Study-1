@@ -1,28 +1,24 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Javascript Study</title>
-<<<<<<< HEAD
-=======
-    <link href="css.css" rel="stylesheet">
->>>>>>> 7c099ff4ce559b8eac7da883011d31afd9ae37eb
+    <<<<<<< HEAD =======
+    <link href="css.css" rel="stylesheet" />
+    >>>>>>> 7c099ff4ce559b8eac7da883011d31afd9ae37eb
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-<<<<<<< HEAD
-
-=======
->>>>>>> 7c099ff4ce559b8eac7da883011d31afd9ae37eb
+    <<<<<<< HEAD ======= >>>>>>> 7c099ff4ce559b8eac7da883011d31afd9ae37eb
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
-<<<<<<< HEAD
+    <<<<<<< HEAD
   </head>
   <body>
     <form>
@@ -33,79 +29,75 @@
     </form>
 
     <script>
-      // "abc".includes("ab");
-      // /*true/false 에 대한 결과값만 나옴
-      // 숫자가 한번 나오냐, A로 끝나냐 , 한글이 들어있나, 영어가 들어있나 이러한 부분을 확인이 불가능하다
-      // */
-      // //  정규식 문자 검사 기능. a 라는 문자가 abcde에 들어있는지 확인하는 기능
-      // //[a-z] a~z 범위 중 아무 글자중 1개라도 있는지 확인 할 수 있다 ([a-zA-Z] [ㄱ-ㅎ가-힣] )
-      // // \S 는 아무 문자 1개라는 뜻, 특수 문자도 포함된다.
-      // //^a 시작이 a 로 시작, a$ a로 끝남
-      // /a/.test("abcde");
-      // //+는 왼쪽 문자 반복 검색
-      // /\S+@\S+\.S+)/.test("aaa@bbb.ccc");
+          // "abc".includes("ab");
+          // /*true/false 에 대한 결과값만 나옴
+          // 숫자가 한번 나오냐, A로 끝나냐 , 한글이 들어있나, 영어가 들어있나 이러한 부분을 확인이 불가능하다
+          // */
+          // //  정규식 문자 검사 기능. a 라는 문자가 abcde에 들어있는지 확인하는 기능
+          // //[a-z] a~z 범위 중 아무 글자중 1개라도 있는지 확인 할 수 있다 ([a-zA-Z] [ㄱ-ㅎ가-힣] )
+          // // \S 는 아무 문자 1개라는 뜻, 특수 문자도 포함된다.
+          // //^a 시작이 a 로 시작, a$ a로 끝남
+          // /a/.test("abcde");
+          // //+는 왼쪽 문자 반복 검색
+          // /\S+@\S+\.S+)/.test("aaa@bbb.ccc");
 
-      // document
-      //   .querySelector(".email-btn")
-      //   .addEventListener("click", function (e) {
-      //     let name = document.getElementById("email").value;
-      //     if (/\S+@+\S+\.\S+/.test(name)) {
-      //       alert("맞음!");
-      //     } else {
-      //       alert("틀림!");
-      //       e.preventDefault();
-      //     }
-      //     console.log(/\S+@+\S+\.\S+/.test(name));
-      //   });
+          // document
+          //   .querySelector(".email-btn")
+          //   .addEventListener("click", function (e) {
+          //     let name = document.getElementById("email").value;
+          //     if (/\S+@+\S+\.\S+/.test(name)) {
+          //       alert("맞음!");
+          //     } else {
+          //       alert("틀림!");
+          //       e.preventDefault();
+          //     }
+          //     console.log(/\S+@+\S+\.\S+/.test(name));
+          //   });
 
-      // function printName() {
-      //   const name = document.getElementById("email").value;
-      // }
+          // function printName() {
+          //   const name = document.getElementById("email").value;
+          // }
+        </script>
+          $(".email_box").on("submit", function (e) {
+            let name = document.getElementById("email").value;
+            if (/\S+@+\S+\.\S+/.test(name)) {
+              alert("맞음!");
+            } else {
+              alert("틀림!");
+              e.preventDefault();
+            }
+          });
+          // $("form").on("submit", function (e) {
+          //   var 비번 = document.getElementById("email").value;
+          //   if (/[A-Z]/.test(비번) == false) {
+          //     console.log(비번);
+          //     alert("대문자없는데요");
+          //   }
+          // });
+      <body>
+        <div style="ovwerflow-hidden">
+          <div class="slide-container">
+            <div class='slide-card-bg'><img src="IMG/car1.png"></div>
+            <div class='slide-card-bg'><img src="IMG/car2.png"></div>
+            <div class='slide-card-bg'><img src="IMG/car3.png"></div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button class="1-button">1</button>
+          <button class="2-button">2</button>
+          <button class='3-button'>3</button>
+        </div>
 
-      $(".email_box").on("submit", function (e) {
-        let name = document.getElementById("email").value;
-        if (/\S+@+\S+\.\S+/.test(name)) {
-          alert("맞음!");
-        } else {
-          alert("틀림!");
-          e.preventDefault();
-        }
-      });
-      // $("form").on("submit", function (e) {
-      //   var 비번 = document.getElementById("email").value;
-      //   if (/[A-Z]/.test(비번) == false) {
-      //     console.log(비번);
-      //     alert("대문자없는데요");
-      //   }
-      // });
-=======
-
-  </head>
-  <body>
-    <div style="ovwerflow-hidden">
-      <div class="slide-container">
-        <div class='slide-card-bg'><img src="IMG/car1.png"></div>
-        <div class='slide-card-bg'><img src="IMG/car2.png"></div>
-        <div class='slide-card-bg'><img src="IMG/car3.png"></div>
-      </div>
-    </div>
-    <div class="btn-container">
-      <button class="1-button">1</button>
-      <button class="2-button">2</button>
-      <button class='3-button'>3</button>
-    </div>
-    
-    <script>
-      $('.1-button').on('click',function(){
-        $('.slide-container').css('transform','translateX(0vw)');
-      });
-      $('.2-button').on('click',function(){
-        $('.slide-container').css('transform','translateX(-100vw)');
-      });
-      $('.3-button').on('click',function(){
-        $('.slide-container').css('transform','translateX(-200vw)');
-      });
->>>>>>> 7c099ff4ce559b8eac7da883011d31afd9ae37eb
+        <script>
+          $('.1-button').on('click',function(){
+            $('.slide-container').css('transform','translateX(0vw)');
+          });
+          $('.2-button').on('click',function(){
+            $('.slide-container').css('transform','translateX(-100vw)');
+          });
+          $('.3-button').on('click',function(){
+            $('.slide-container').css('transform','translateX(-200vw)');
+          })
     </script>
   </body>
-</html>
+</html> -->

@@ -1,0 +1,15 @@
+.navbar {
+  position: fixed;
+  z-index: 5;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.popup-bg {
+  height: 2000px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(157, 190, 190, 0.534);
+}/*# sourceMappingURL=css.css.map */

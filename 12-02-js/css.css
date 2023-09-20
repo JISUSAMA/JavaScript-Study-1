@@ -1,5 +1,5 @@
 .slide-container {
-  width: 300vw;
+  width: 400vw;
   transition: all 1s;
   transform: translateX(0vw);
 }

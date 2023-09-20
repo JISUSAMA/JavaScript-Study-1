@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript Study</title>
+    <link href="css.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <span class="navbar-brand">Navbar</span>
+        <button class="navbar-toggler" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="popup-bg"></div>
+      </div>
+    </nav>
+    <div class="background-container" style="height: 1000px; width: 100%; background-color: beige">
+    <!-- <div class="popup-bg">
+      <nav class="navbar">navbar</nav>
+      <div
+        class="naver-scroll"
+        style="width: 200px; height: 100px; overflow-y: scroll"
+      >
+        [여러분을 환영합니다.] 네이버 서비스 및 제품(이하 ‘서비스’)을 이용해
+        주셔서 감사합니다. 본 약관은 다양한 네이버 서비스의 이용과 관련하여
+        네이버 서비스를 제공하는 네이버 주식회사(이하 ‘네이버’)와 이를 이용하는
+        네이버 서비스 회원(이하 ‘회원’) 또는 비회원과의 관계를 설명하며, 아울러
+        여러분의 네이버 서비스 이용에 도움이 될 수 있는 유익한 정보를 포함하고
+        있습니다. 네이버 서비스를 이용하시거나 네이버 서비스 회원으로 가입하실
+        경우 여러분은 본 약관 및 관련 운영 정책을 확인하거나 동의하게 되므로,
+        잠시 시간을 내시어 주의 깊게 살펴봐 주시기 바랍니다.
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        // console.log("window.scrollY: " + window.scrollY);
+        // console.log("window.pageXOffset: " + window.pageXOffset);
+        // window.scrollto(0,120); //강제로 스크롤하기 //bootstrap을 설치했을 경우 이상하게 천천히 이동
+        $(window).on("scroll", function () {
+          // $(window).scrollTop();
+          //현재 스크롤바 위치 출력
+          // $(window).scrollTop(100);
+          //현재 스크롤바 100으로 이동
+        });
+      });
+      $(".naver-scroll").on("scroll", function () {
+        //스크롤바 내린양 + div-box의 높이 = scrollHigth
+        // 스크롤양 = document.querySelector(".naver-scroll").scrollTop;
+        // 실제높이 = document.querySelector(".naver-scroll").scrollHight;
+        // 높이 = document.querySelector(".naver-scroll").clientHeight;
+        if (
+          Math.round(
+            document.querySelector(".naver-scroll").scrollTop +
+              document.querySelector(".naver-scroll").clientHeight
+          ) >= document.querySelector(".naver-scroll").scrollHeight
+        ) {
+          alert("확인!");
+        }
+
+        console.log($(".naver-scroll").scrollTop());
+        console.log(document.querySelector(".naver-scroll").clientHeight);
+        console.log(document.querySelector(".naver-scroll").scrollHeight);
+      });
+    </script> -->
+  </body>
+</html>
