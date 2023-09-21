@@ -2,8 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8" />
-
-    <title>javascript Study</title>
     <link href="css.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -17,6 +15,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <div class="container mt-3">
       <div class="card p-3">
@@ -24,6 +23,20 @@
         <span class="product-price">500000</span>
       </div>
     </div>
+
+    <form class="container my-5 form-group">
+      <p>상품선택</p>
+      <select class="form-select mt-2" onchange="">
+        <option>모자</option>
+        <option>셔츠</option>
+      </select>
+      <select class="form-select form-hide mt-2">
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+    </form>
+
     <div class="container">
       <div class="black-bg">
         <div class="white-bg">모달창 내용</div>
@@ -45,27 +58,15 @@
     </div>
 
     <script src="tab.js"></script>
-    <!-- <script>
-      document
-        .querySelector(".display-button")
-        .addEventListener("click", function () {
-          document.querySelector(".black-bg").classList.add("show");
-        });
-      document
-        .querySelector(".black-bg")
-        .addEventListener("click", function (e) {
-          // e.target; //유저가 실제로 누른거
-          // e.currentTarget; //이벤트 리스너가 달린곳(this)
-          // e.preventDefault(); //이벤트 기본동작을 막아준다
-          // e.stopPropagation();//상위 요소로 이벤트 버블링을 막아준다.
-          if (e.target == document.querySelector(".black-bg")) {
-            document.querySelector(".black-bg").classList.remove("show");
+    <script>
+      $(".form-select")
+        .eq(0)
+        .on("input", function () {
+          var value = $(".form-select").eq(0).val();
+          if (value == "셔츠") {
+            $(".form-select").eq(1).removeClass("form-hide");
           }
         });
-      $(".list").click(function (e) {
-        tap_open(e.target.dataset.id);
-        console.log(e.target.dataset.id);
-      });
-    </script> -->
+    </script>
   </body>
 </html>
