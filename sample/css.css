@@ -1,3 +1,9 @@
+.slide-container {
+  width: 300vw;
+  transition: all 1s;
+  transform: translateX(0vw);
+}
+
 .slide-card-bg {
   width: 100vw;
   float: left;
