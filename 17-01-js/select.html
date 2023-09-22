@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="css.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container mt-3">
+      <div class="card p-3">
+        <span class="product-name">상품명</span>
+        <span class="product-price">500000</span>
+      </div>
+    </div>
+
+    <form class="container my-5 form-group">
+      <p>상품선택</p>
+      <select class="form-select mt-2" onchange="">
+        <option>모자</option>
+        <option>셔츠</option>
+        <option>바지</option>
+      </select>
+      <select class="form-select form-hide mt-2">
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+
+      <div id="container">
+        <h1>insertAdjacentHTML 로 문장 추가하기</h1>
+      </div>
+    </form>
+
+    <script>
+      // var a = document.createElement("h1"); //p태그를 생성
+      // a.innerHTML = "p태그 생성완료!";
+      // document.querySelector("#test").appendChild(a); //p 태그를 id=test 안에 추가해줌
+
+      var a = "<p> insertAdjacentHTML : 태그 생성완료!</p>";
+      document.querySelector("#container").insertAdjacentHTML("beforeend", a);
+      document.querySelector("#container").innerHTML = a;
+
+      // $("#container").append(a);
+    </script>
+    <div class="container">
+      <div class="black-bg">
+        <div class="white-bg">모달창 내용</div>
+      </div>
+      <ul class="list">
+        <li class="tab-button orange" data-id="0">Products</li>
+        <li class="tab-button" data-id="1">Information</li>
+        <li class="tab-button" data-id="2">Shipping</li>
+      </ul>
+      <div class="tab-content show">
+        <p>상품설명입니다. Product</p>
+      </div>
+      <div class="tab-content">
+        <p>스펙설명입니다. Information</p>
+      </div>
+      <div class="tab-content">
+        <p>배송정보입니다. Shipping</p>
+      </div>
+    </div>
+
+    <script src="tab.js"></script>
+    <script>
+      var size = ["XL", "XXL", "XXXL"];
+      $(".form-select")
+        .eq(0)
+        .on("input", function () {
+          var value = $(".form-select").eq(0).val();
+          if (value == "셔츠") {
+            $(".form-select").eq(1).removeClass("form-hide");
+          } else if (value == "바지") {
+            $(".form-select").eq(1).removeClass("form-hide");
+            size.forEach(function (e) {
+              // $(".form-select").append("<option>" + e + "</option>");
+              $(".form-select").append(`<option>${e}</option>`);
+            });
+          }
+          size.forEach((element) => console.log(element));
+          // for (i = 0; i < size.length; i++) {
+          //   console.log(size[i]);
+          // }
+        });
+      var obj = { name: "kim", age: 20 };
+      for (var key in obj) {
+        console.log(obj[key]);
+      }
+      size.forEach(() => {});
+    </script>
+  </body>
+</html>
