@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="css.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- <script>
+      //배열안에 이름 찾기
+      var name_list = ["흥민", "영희", "철수", "재석"];
+      find_name("흥민");
+      function find_name(name) {
+        name_list.forEach((element) => {
+          if (name == element) {
+            console.log("있어요!");
+          }
+        });
+      }
+    </script> -->
+    <!-- <script>
+      //2단~9단
+      for (let i = 1; i < 9; i++) {
+        for (let j = 1; j < 10; j++) {
+          console.log(i + 1 + " X " + j + " = " + (i + 1) * j);
+        }
+      }
+    </script> -->
+    <script>
+      //평균 점수 계산기 만들기
+      Average([40, 40, 40], 20);
+      function Average(old_s, new_s) {
+        let old_avr = 0;
+        old_s.forEach((element) => {
+          old_avr += element;
+        });
+        old_avr = old_avr / old_s.length;
+        if (old_avr < new_s) {
+          console.log("평균보다 " + (new_s - old_avr) + "점이 올랐네요");
+        } else if (old_avr > new_s) {
+          console.log(
+            "평균보다 " + (old_avr - new_s) + "점이 떨어졌네요 재수추천"
+          );
+        } else {
+          console.log("평균과 동일");
+        }
+      }
+    </script>
+  </body>
+</html>
