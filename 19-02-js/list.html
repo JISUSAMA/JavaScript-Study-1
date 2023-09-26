@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>javascript Study</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-list"></div>
+      <button class="btn btn-danger" id="sort_btn">다나가순으로 정렬</button>
+      <button class="btn btn-danger" id="filter_btn">
+        6만원 이하 상품 보기
+      </button>
+    </div>
+
+    <script>
+      var click_count = 0;
+      var products = [
+        {
+          id: 0,
+          price: 70000,
+          title: "Blossom Dress",
+        },
+        {
+          id: 1,
+          price: 50000,
+          title: "Springfield Shirt",
+        },
+        {
+          id: 2,
+          price: 60000,
+          title: "Black Monastery",
+        },
+      ];
+
+      products_fuction();
+      //상품명 다나가 순 정렬 버튼
+      $("#sort_btn").click(function () {
+        products.sort(function (a, b) {
+          return a.title < b.title;
+        });
+        console.log(products);
+        $(".card-list").html("");
+        products_fuction();
+      });
+      // 6만원 이하 상품만 보기 버튼
+      $("#filter_btn").click(function () {
+        $(".card-list").html("");
+        products.filter(function (a) {
+          if (a.price <= 60000) {
+            $(".card-list").append(
+              `<div class="container">
+         <div class="row">
+           <div class="col-sm-4">
+             <img src="https://via.placeholder.com/600" class="w-100" />
+             <h5>${a.title}</h5>
+             <p>가격 : ${a.price}</p>
+           </div>
+         </div>
+       </div>`
+            );
+          }
+        });
+      });
+
+      function products_fuction() {
+        products.forEach((e) => {
+          $(".card-list").append(
+            `<div class="container">
+         <div class="row">
+           <div class="col-sm-4">
+             <img src="https://via.placeholder.com/600" class="w-100" />
+             <h5>${e.title}</h5>
+             <p>가격 : ${e.price}</p>
+           </div>
+         </div>
+       </div>`
+          );
+        });
+      }
+    </script>
+  </body>
+</html>
