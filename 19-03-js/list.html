@@ -90,32 +90,28 @@
                 <img src="https://via.placeholder.com/600" class="w-100" />
                 <h5>${e.title}</h5>
                 <p>가격 : ${e.price}</p>
-                <button class="buy"> 구매</button>
+                <button class="buy" >구매</button>
               </div>
             </div>
           </div>`
           );
         });
       }
-
-      // localStorage.setItem("이름", "kim");
-      // console.log(localStorage.getItem("이름"));
-
-      //stringfy 는 object를 json 형식(string)으로 변경해줌
-      var arr = [1, 2, 3];
-      var newArr = JSON.stringify(arr);
-      localStorage.setItem("num", newArr);
-      console.log(newArr);
-      //parse는 Json형식(string)을 object 형식으로 변환해줌
-      var getItem = localStorage.getItem("num");
-      var arr_par = JSON.parse(getItem);
-      console.log(arr_par);
-
-      //data 수정하기
-      var arr = [1, 2, 3, 4];
-      var newArr = JSON.stringify(arr);
-      localStorage.setItem("num", newArr);
-      console.log("new: " + newArr);
+      var json_cart_list;
+      $(".buy").click(function (e) {
+        var title = $(e.target).siblings("h5").text();
+        if (json_cart_list != null) {
+          json_cart_list = localStorage.getItem("cart-title");
+          var par_json = JSON.parse(json_cart_list);
+          par_json.push(title);
+          par_json = JSON.stringify("cart-title", par_json);
+          json_cart_list = localStorage.setItem("cart-title", cart_title);
+        } else {
+          var cart_title = JSON.stringify([title]);
+          json_cart_list = localStorage.setItem("cart-title", cart_title);
+        }
+        console.log(json_cart_list);
+      });
     </script>
   </body>
 </html>
