@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>javascript Study</title>
+    <link href="css.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="cart-page">장바구니 페이지</div>
+
+    <script>
+      var arr_cart = localStorage.getItem("cart-title");
+      var new_cart = JSON.parse(arr_cart);
+      console.log(new_cart.length);
+      new_cart.forEach((element) => {
+        $(".cart-page").append(`<p> ${element}</p>`);
+      });
+    </script>
+  </body>
+</html>
