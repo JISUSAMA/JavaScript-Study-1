@@ -1,0 +1,19 @@
+.slide-container {
+  width: 400vw;
+  transition: all 1s;
+  transform: translateX(0vw);
+}
+
+.slide-card-bg {
+  width: 100vw;
+  float: left;
+}
+
+.slide-card-bg img {
+  width: 100%;
+}
+
+.btn-container {
+  text-align: center;
+  margin: 10px;
+}/*# sourceMappingURL=css.css.map */
