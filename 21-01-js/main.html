@@ -71,24 +71,63 @@
         }
         console.log(num);
       });
-      function show_container($pos) {
-        $(".slide-container").css("transform", "translateX(" + $pos + "vw)");
-        console.log(num);
-      }
-
+      //touchstart / touchend / touchmove
       //mousedown / mouseup / mousemove
       //e.clientX 현재 마우스 위치의 X 좌표
+
+      //Hammer.js를 사용하면 브라우저간 호환성을 잡아준다
       var downPos = 0;
+      var mousedown_b = false;
+      var mousePos_dist = 0;
       $(".slide-card-bg")
         .eq(0)
         .on("mousedown", function (e) {
           downPos = e.clientX;
+          mousedown_b = true;
+        });
+      $(".slide-card-bg")
+        .eq(0)
+        .on("mouseup", function (e) {
+          mousedown_b = false;
+          console.log(mousePos_dist);
+          if (mousePos_dist < -100) {
+            console.log(num);
+            if (num == 1) {
+              num = 2;
+              show_container(-100);
+            } else if (num == 2) {
+              num = 3;
+              show_container(-200);
+            } else if (num == 3) {
+              num = 1;
+              show_container(0);
+            }
+          } else {
+            if (num == 1) {
+              show_container(0);
+            }
+          }
         });
       $(".slide-card-bg")
         .eq(0)
         .on("mousemove", function (e) {
-          console.log(downPos - e.clientX);
+          if (mousedown_b) {
+            $(".slide-container").css(
+              "transform",
+              `translateX(${e.clientX - downPos}px)`
+            );
+            mousePos_dist = e.clientX - downPos;
+            console.log(e.clientX - downPos);
+          }
         });
+
+      function show_container($pos) {
+        $(".slide-container").css("transform", "translateX(" + $pos + "vw)");
+        console.log(num);
+      }
+      // setTimeout(() => {
+      //   $(".slide-container").css("transform", "none");
+      // }, 500);
     </script>
   </body>
 </html>
