@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>상점 홈페이지</title>
+    <link href="css.css" rel="stylesheet" />
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+  </head>
+  <body>
+    <div
+      class="Home-1"
+      style="width: 100%; height: 50px; background-color: black;"
+    >
+    <div style="padding-top: 10px; padding-left: 10px;">
+      <h2 style="display: inline; color: white">집 꾸미기</h2>
+      <button class="top-button page-check">Home</button>
+      <button class="top-button">스토어</button>
+      <button class="top-button" >시공견적</button>
+
+    </div>
+   
+    </div>
+    <div class="Home-2" style="background-color: #f4f4f4">
+      <input type="text" value="검색어입력" id="home2_serch_text"></input>
+      <div class="card-container">
+        <div style="display: flex">
+          <div class="card-bg" draggable="true">
+            <div style="padding: 10px" id="shop_num0">
+            
+            </div>
+          </div>
+          <div class="card-bg" draggable="true" >
+            <div style="padding: 10px" id="shop_num1">
+             
+            </div>
+          </div>
+          <div class="card-bg" draggable="true" >
+            <div style="padding: 10px" id="shop_num2">
+            
+            </div>
+          </div>
+          <div class="card-bg" draggable="true" >
+            <div style="padding: 10px" id="shop_num3">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 100%; background-color: #e2e2e2">
+        <div class="cart-box">
+          <h4>장바구니</h4>
+          <div class="drag-box">여기로 드래그</div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+$('#home2_serch_text').on('click',function(e){
+  $('#home2_serch_text').val('');
+});
+
+let products= [];
+let cart=[];
+//쇼핑몰 이름 뿌려주기
+$.get('store.json').then((data)=>{
+  products = data.products;
+
+  data.products.forEach((a,i) => {
+    $('#shop_num'+i).append(` 
+    <div data-id="${a.id}"></div>
+    <img src= ${a.photo} />
+              <h2>${a.title}</h2>
+              <p>${a.brand}</p>
+              <p>가격 :${a.price}</p>
+              <button class='add' data-id="${a.id}">담기</button>`)
+  });
+})
+$('.add').click(function(e){
+  let productId = e.target.dataset.id;
+  let id_sort = cart.findIndex((a)=>{return a.id == productId;});
+console.log('dddddddd');
+  if(id_sort==-1){
+    let now_product = products.find((a)=>{
+      return a.id == productId
+    });
+    now_product.count=1;
+  cart.push(now_product);
+  }else{
+    cart[id_sort].count++;
+  }
+  console.log(cart);
+  
+});
+      </script>
+  </body>
+</html>
