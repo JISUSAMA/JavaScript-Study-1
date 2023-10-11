@@ -43,7 +43,30 @@ body {
   padding: 10px;
 }
 .drag-box {
+  position: relative;
   background-color: black;
   color: white;
   height: 250px;
+
+  img {
+    width: 100%;
+  }
+  button {
+    border: 0px;
+    color: white;
+    background-color: black;
+    width: 50px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 3px;
+  }
+}
+.drag-box-item {
+  width: 150px;
+  height: 10px;
+  text-align: center;
+  margin: 10px;
+  img {
+    width: 100%;
+  }
 }
